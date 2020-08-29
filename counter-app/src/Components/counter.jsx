@@ -5,15 +5,11 @@ class Counter extends Component {
         count: this.props.value
      };
 
-     constructor() {
-         super();
-         this.handleIncrement = this.handleIncrement.bind(this);
-     }
      handleIncrement = () => {
          this.setState({ count: this.state.count + 1 });
      }
-    render() { 
-        console.log("props",this.props);
+    render() {
+        console.log(this.props)
         return (
             <div>
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
